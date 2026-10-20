@@ -161,16 +161,3 @@ int main(void)
 }
 ```
 
-## Known Limitations
-
-- Not thread-safe: there is no locking around the shared lists and globals.
-- Return values of `sbrk` and `mmap` are not checked for failure.
-- Memory is never returned to the OS from the `sbrk` heap, only mapped blocks are unmapped.
-- First-fit search is linear in the number of heap blocks.
-- `os_calloc` does not check `nmemb * size` for overflow.
-- Reallocating a mapped block currently does not copy the old contents into the new block.
-- Freed mapped blocks are not unlinked from the mapped list.
-
-## License
-
-Released under the BSD-3-Clause license (see the `SPDX-License-Identifier` header in the source).
