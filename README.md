@@ -1,5 +1,3 @@
-# Custom-memory-allocator
-
 # Custom Memory Allocator
 
 A minimal user-space implementation of the C dynamic memory API (`malloc`, `free`, `calloc`, `realloc`) built directly on top of the Linux system calls `brk`/`sbrk` and `mmap`/`munmap`.
